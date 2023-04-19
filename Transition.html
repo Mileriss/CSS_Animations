@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+      #bloco-1 {
+        background-color: blue;
+        height: 10em;
+        width: 10em;
+        margin: 10px;
+      }
+      #bloco-1:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+
+      #bloco-2 {
+        background-color: blue;
+        height: 10em;
+        width: 10em;
+        margin: 10px;
+        transition-property: background-color, border-radius;
+        transition-duration: 0.5s, 0.5s;
+      }
+      #bloco-2:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+
+      #bloco-3 {
+        background-color: blue;
+        height: 10em;
+        width: 10em;
+        margin: 10px;
+        transition-property: background-color, border-radius;
+        transition-duration: 1s, 2s;
+      }
+      #bloco-3:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+
+      #bloco-4 {
+        background-color: blue;
+        height: 10em;
+        width: 10em;
+        margin: 10px;
+        transition-property: background-color, border-radius;
+        transition-duration: 1s, 2s;
+        transition-delay: 1s;
+      }
+      #bloco-4:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+
+      #bloco-5 {
+        background-color: blue;
+        height: 10em;
+        width: 10em;
+        margin: 10px;
+        transition-property: background-color, border-radius;
+        transition-duration: 1s, 2s;
+        transition-timing-function: ease-in;
+      }
+      #bloco-5:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+
+      #bloco-6 {
+        background-color: blue;
+        height: 10em;
+        width: 10em;
+        margin: 10px;
+        transition-property: background-color, border-radius;
+        transition-duration: 1s, 2s;
+        transition-timing-function: ease-out;
+      }
+      #bloco-6:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+      #bloco-7 {
+        background-color: blue;
+        height: 10em;
+        width: 10em;
+        margin: 10px;
+        transition-property: background-color, border-radius;
+        transition-duration: 1s, 2s;
+        transition-timing-function: ease-in-out;
+      }
+      #bloco-7:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+      #bloco-8 {
+        background-color: blue;
+        height: 10em;
+        width: 10em;
+        margin: 10px;
+        transition-property: background-color, border-radius;
+        transition-duration: 1s, 2s;
+        transition-timing-function: cubic-bezier(0.15, 0.89, 0.85, 0.26);
+      }
+      #bloco-8:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Hover sem Transition</h2>
+    <div id="bloco-1"></div>
+    <h2>transition-property: background-color, border-radius;</h2>
+    <span>Vai definir quais propriedades que sofrerão a transicão (transition)</span>
+
+    <div id="bloco-2"></div>
+    <h2>transition-duration: 1s, 2s;</h2>
+    <span>Vai definir o tempo de transição para cada propriedade <br />
+      1 segundo para alterar a cor de fundo e 2 segundos para o arredondamento das bordas</span>
+
+    <div id="bloco-3"></div>
+    <h2>transition-delay: 1s;</h2>
+    <span>Vai definir um tempo para iniciar e finalizar a ação, neste caso, 1 segundo. <br />
+      É necessário aguardar 1 segundo para ver a transição acontecer</span>
+
+    <div id="bloco-4"></div>
+    <h2>transition-timing-function: ease-in;</h2>
+    <span>Vai suavizar a transição no inicio da ação</span>
+
+    <div id="bloco-5"></div>
+    <h2>transition-timing-function: ease-out;</h2>
+    <span>Vai suavizar a transição no final da ação</span>
+
+    <div id="bloco-6"></div>
+    <h2>transition-timing-function: ease-in-out;</h2>
+    <span>Vai suavizar a transição tanto no inicio como no final da ação</span>
+
+    <div id="bloco-7"></div>
+    <h2>transition-timing-function: cubic-bezier(.15,.89,.85,.26);</h2>
+    <span>Te permite definir a duração de cada ato na transição. <br />
+      Neste caso o inicio e o fim estarão mais acelerados, enquanto o "meio" da transição será mais lento</span>
+    <div id="bloco-8"></div>
+  </body>
+</html>
