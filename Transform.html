@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="/Transform.css" />
+    <title>Transform</title>
+  </head>
+  <body>
+    <div>
+      <h1>Transform</h1>
+      <p>Esse atributo CSS vai permitir que você realize diversas "formatações" em um objeto/elemento na sua página.</p>
+      <p>Com o Transform é possível manipular um elemento para que ele se desloque, movimente, aumente ou diminua da forma que você desejar.</p>
+    </div>
+    <hr />
+    <div>
+      <h2>TranslateX - HORIZONTAL</h2>
+      <p>Permite que você desloque o elemento no sentido horizontal, possibilitando que ele saia da div atual e siga de acordo com o que você definir</p>
+      <p><b>transform: translateX(50%);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-translatex" src="./Imagens/img_exemplo.svg" />
+    </div>
+
+    <div>
+      <h2>TranslateY - VERTICAL</h2>
+      <p>Permite que você desloque o elemento no sentido vertical, possibilitando que ele saia da div atual e siga de acordo com o que você definir</p>
+      <p><b>transform: translateY(50%);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-translatey" src="./Imagens/img_exemplo.svg" />
+    </div>
+
+    <div>
+      <h2>Translate - AMBOS</h2>
+      <p>Permite que você desloque o elemento em ambos os sentidos, possibilitando que ele saia da div atual e siga de acordo com o que você definir</p>
+      <p>
+        1º Valor - Horizontal <br />
+        2º Valor - Vertical
+      </p>
+      <p><b>transform: translate(50%, 50%);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-translate" src="./Imagens/img_exemplo.svg" />
+    </div>
+    <hr />
+    <div>
+      <h2>ScaleX - HORIZONTAL</h2>
+      <p>Permite que você altere a escala do elemento, ou seja, o seu tamanho e proporção</p>
+      <p>Aumentando o tamanho horizontalmente em 2x</p>
+      <p><b>transform: scaleX(2);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-scalex" src="./Imagens/img_exemplo.svg" />
+    </div>
+
+    <div>
+      <h2>ScaleY - VERTICAL</h2>
+      <p>Permite que você altere a escala do elemento, ou seja, o seu tamanho e proporção</p>
+      <p>Aumentando o tamanho verticalmente em 2x</p>
+      <p><b>transform: scaleY(2);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-scaley" src="./Imagens/img_exemplo.svg" />
+    </div>
+
+    <div>
+      <h2>Scale - AMBOS</h2>
+      <p>Permite que você altere a escala do elemento, ou seja, o seu tamanho e proporção</p>
+      <p>Aumentando o tamanho total em 2x</p>
+      <p><b>transform: scale(2);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-scale" src="./Imagens/img_exemplo.svg" />
+    </div>
+    <hr />
+
+    <div>
+      <h2>Rotate</h2>
+      <p>
+        Permite que você rotacione o elemento em quantos graus desejar. <br />
+        É possível utilizar as unidades <b>deg</b> ou <b>turn</b>
+      </p>
+      <p><b>transform: rotate(90deg); -> 90º graus</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-rotate" src="./Imagens/img_exemplo.svg" />
+    </div>
+    <p><b>transform: rotate(0.5turn); -> meia volta/ 180º graus</b></p>
+    <div id="bloco-img">
+      <img class="imagem" id="img-rotate-2" src="./Imagens/img_exemplo.svg" />
+    </div>
+    <hr />
+    <div>
+      <h2>SkewX - HORIZONTAL</h2>
+      <p>Permite que você incline o elemento horizontalmente</p>
+      <p><b>transform: skewX(50deg);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-skewx" src="./Imagens/img_exemplo.svg" />
+    </div>
+    <div>
+      <h2>SkewY - VERTICAL</h2>
+      <p>Permite que você incline o elemento verticalmente</p>
+      <p><b>transform: skewY(50deg);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-skewy" src="./Imagens/img_exemplo.svg" />
+    </div>
+    <hr />
+    <div>
+      <h2>Skew - AMBOS</h2>
+      <p>Permite que você incline o elemento em ambas as direções</p>
+      <p><b>transform: skew(30deg, 45deg);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-skew" src="./Imagens/img_exemplo.svg" />
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>Multiplas formatações</h2>
+      <p>É possível utilizar todos os elementos do transform para criar uma animação unica</p>
+      <p><b>transform: translateX(5em) scaleX(2) rotate(90deg) skewX(10deg);</b></p>
+    </div>
+    <div id="bloco-img">
+      <img class="imagem" id="img-todos" src="./Imagens/img_exemplo.svg" />
+    </div>
+  </body>
+</html>
