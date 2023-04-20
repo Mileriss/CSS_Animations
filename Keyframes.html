@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyframes</title>
+    <style>
+      body {
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+      }
+
+      .descricao{
+        text-align: center;
+      }
+
+      .imagens {
+        height: 20em;
+        border-radius: 2em;
+      }
+
+      .circulo {
+        background-color: rebeccapurple;
+        height: 10em;
+        width: 10em;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 1px purple;
+        margin: 1em;
+      }
+      /*FORMATAÇÃO COM %*/
+      #c1 {
+        animation: circulo-1 1s;
+      }
+      @keyframes circulo-1 {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(100vw - 10em));
+        }
+      }
+      /*FORMATAÇÃO COM FROM - TO*/
+      #c2 {
+        animation: circulo-2 1s;
+      }
+      @keyframes circulo-2 {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(100vw - 10em));
+        }
+      }
+      /*MULTIPLAS FORMATAÇÕES*/
+      #c3 {
+        animation: circulo-3 1s;
+      }
+      @keyframes circulo-3 {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          background-color: red;
+        }
+        100% {
+          transform: translateX(calc(100vw - 10em));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="descricao">
+      <h1>@Keyframes</h1>
+      <p>Essa funcionalidade permite que você defina uma formatação em um elemento para ele realizar determinada ação em um determinado local/espaço.</p>
+      <p>É possível definir que a ação seja realizada utilizando qualquer formatação CSS, inclusive as de Transform, Transition e principalmente Animation.</p>
+      <p>De acordo com o valor descrito em % ou descrito com a propria palavra chave definida como FROM (de onde) TO (para onde), a ação será realizada da forma que o usuário desejar.</p>
+    </div>
+
+    <img class="imagens" src="./CodeSnaps/Keyframe_c1.png" />
+    <div class="circulo" id="c1"></div>
+    <img class="imagens" src="./CodeSnaps/Keyframe_c2.png" />
+    <div class="circulo" id="c2"></div>
+    <img class="imagens" src="./CodeSnaps/Keyframe_c3.png" />
+    <div class="circulo" id="c3"></div>
+  </body>
+</html>
