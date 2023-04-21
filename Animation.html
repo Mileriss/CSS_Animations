@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .circulo {
+        background-color: green;
+        box-shadow: 0 0 10px 2px greenyellow;
+        height: 5em;
+        width: 5em;
+        border-radius: 50%;
+        margin: 1em;
+      }
+      #c1{
+        animation-name: c1;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+      }
+      @keyframes c1{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c2{
+        animation-name: c2;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+      }
+      @keyframes c2{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c3{
+        animation-name: c3;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes c3{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c4{
+        animation-name: c4;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(1, 0, 0, 1);
+      }
+      @keyframes c4{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c5{
+        animation-name: c5;
+        animation-duration: 2s;
+        animation-timing-function: steps(3);
+      }
+      @keyframes c5{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c6{
+        animation-name: c6;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+      }
+      @keyframes c6{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c7{
+        animation-name: c7;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+      }
+      @keyframes c7{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c8{
+        animation-name: c8;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: 2;
+      }
+      @keyframes c8{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c9{
+        animation-name: c9;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+      }
+      @keyframes c9{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c10{
+        animation-name: c10;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes c10{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c11{
+        animation-name: c11;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+      }
+      @keyframes c11{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c12{
+        animation-name: c12;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      @keyframes c12{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c13{
+        animation-name: c13;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+      }
+      @keyframes c13{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+      #c14{
+        animation: c14 1.5s linear infinite alternate;
+      }
+      @keyframes c14{
+        100%{
+            transform: translateX(calc(100vw - 5em));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <h1>Animation</h1>
+      <p>Essa propriedade é uma das principais com relação a animações. Graças a essa propriedade é possível definir para onde e por quanto tempo a animação será realizada.</p>
+      <p>As opções disponíveis na propriedade Animation permitem que você crie uma animação exatamente da forma que você desejar.</p>
+      <p>Em um uso com outras propriedades, a sua animação poderá ficar totalmente dinamica e interativa, basta saber usar da forma correta.</p>
+    </div>
+
+    <hr>
+
+    <h2>Animation-name: "nome-da-animação";</h2>
+    <p>Esse atributo vai definir o nome da sua animação, este mesmo nome será utilizado na propriedade <b>@Keyframes</b></p>
+    <h2>Animation-duration: "segundos";</h2>
+    <p>Esse atributo vai definir o tempo da sua animação em segundos (s) ou em milisegundos (ms)</p>
+    <hr>
+    <h2>Animation-timing-function: "ease-in" | "ease-out" | "ease-in-out" |"cubic-bezier()" | "steps()" | "linear";</h2>
+    <p>Esse atributo vai permitir que você selecione uma formatação pré-definida pelo sistema</p>
+    <h3>ease-in</h3>
+    <span>Vai iniciar a animação de forma mais suave</span>
+    <div class="circulo" id="c1"></div>
+    <h3>ease-out</h3>
+    <span>Vai finalizar a animação de forma mais suave</span>
+    <div class="circulo" id="c2"></div>
+    <h3>ease-in-out</h3>
+    <span>Vai iniciar e finalizar a animação de forma mais suave</span>
+    <div class="circulo" id="c3"></div>
+    <h3>cubic-bezier</h3>
+    <span>Você pode definir a velocidade e tempo do movimento</span>
+    <div class="circulo" id="c4"></div>
+    <h3>steps</h3>
+    <span>Você define a quantidade de frames que serão utilizados</span>
+    <div class="circulo" id="c5"></div>
+    <h3>linear</h3>
+    <span>Segue uma linha reta, sem nenhum tipo de formatação ou alteração</span>
+    <div class="circulo" id="c6"></div>
+    <hr>
+    <h2>animation-delay: "tempo-delay";</h2>
+    <span>Define um tempo de "atraso" até a animação iniciar</span>
+    <div class="circulo" id="c7"></div>
+    <hr>
+    <h2>animation-iteration-count: "valor" | "infinite";</h2>
+    <span>Permite que você defina quantas vezes a animação deve acontecer antes de parar</span>
+    <h3>valor</h3>
+    <span>Define um valor de quantas vezes a animação vai acontecer</span>
+    <div class="circulo" id="c8"></div>
+    <h3>infinite</h3>
+    <span>Permite que a animação ocorra infinitamente</span>
+    <div class="circulo" id="c9"></div>
+    <hr>
+    <h2>animation-direction: "alternate" | "reverse";</h2>
+    <h3>alternate</h3>
+    <span>Permite que a animação vá e volte pelo mesmo caminho</span>
+    <div class="circulo" id="c10"></div>
+    <h3>reverse</h3>
+    <span>Permite que a animação vá e volte pelo mesmo caminho, porem, iniciando pelo final</span>
+    <div class="circulo" id="c11"></div>
+    <hr>
+    <h2>animation-fill-mode: "forwards" | "backwards";</h2>
+    <span>Permite que você defina qual o estado final da animação</span>
+    <h3>forwards</h3>
+    <span>Ao finalizar a animação, o elemento ficará no estado final</span>
+    <div class="circulo" id="c12"></div>
+    <h3>backwards</h3>
+    <span>Ao finalizar a animação, o elemento ficará no estado inicial</span>
+    <div class="circulo" id="c13"></div>
+    <hr>
+    <h2>shorthand - É uma palavra para abreviar uma forma de definir varios atributos na mesma linha de comando</h2>
+    <h3>animation: c14 1.5s linear infinite alternate;</h3>
+    <span>animation-name - c14 <br> animation-duration - 1.5s <br> animation-timing-function - linear <br> animation-iteration-count - infinite <br> animation-direction - alternate</span>
+    <div class="circulo" id="c14"></div>
+  </body>
+</html>
