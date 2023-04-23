@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seta movimentando</title>
+
+    <style>
+        body{
+            animation: setinha 1s ease-in-out alternate infinite;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        #seta{
+            height: 8em;
+        }
+
+        @keyframes setinha {
+            from{
+                transform: translateY(0);
+            }
+            to{
+                transform: translateY(50px);
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <img id="seta" src="https://www.svgrepo.com/show/513805/arrow-down.svg">
+    
+</body>
+</html>
